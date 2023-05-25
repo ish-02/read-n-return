@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Read &amp; Return</string>
+    <string name="r_amp_r"><![CDATA[R & R]]></string>
+    <string name="enter_valid_email_and_password">Enter valid email and password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="sign_in">Sign in</string>
+    <string name="name">Name</string>
+    <string name="create_account">create account</string>
+    <string name="email_">Email</string>
+    <string name="register">Register</string>
+    <string name="fiction">Fiction</string>
+    <string name="authors">Authors</string>
+    <string name="bestsellers">Bestsellers</string>
+    <string name="new_">New</string>
+    <string name="mystery">Mystery</string>
+    <string name="book_genre">Book Genre</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="upload">Upload</string>
+    <string name="upload_a_book">Upload A Book</string>
+    <string name="description">Description</string>
+    <string name="genre">Genre</string>
+    <string name="todo">TODO</string>
+    <string name="recent_books">Recent Books</string>
+    <string name="author">Author</string>
+</resources>

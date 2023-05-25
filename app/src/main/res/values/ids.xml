@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="SearchView1" type="id" />
+    <item name="SearchView" type="id" />
+    <item name="textView4" type="id" />
+    <item name="imageView3" type="id" />
+    <item name="textView5" type="id" />
+    <item name="textView7" type="id" />
+    <item name="textView8" type="id" />
+    <item name="textView9" type="id" />
+    <item name="textView6" type="id" />
+    <item name="imageView5" type="id" />
+    <item name="button3" type="id" />
+    <item name="textView3" type="id" />
+    <item name="welcome" type="id" />
+    <item name="button" type="id" />
+    <item name="inputPassword" type="id" />
+    <item name="inputName" type="id" />
+    <item name="textView" type="id" />
+</resources>
