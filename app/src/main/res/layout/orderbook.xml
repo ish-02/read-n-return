@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecentBooks">
+    tools:context=".OrderbookActivity">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -17,8 +17,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
+        app:layout_constraintVertical_bias="0.0"
+        >
         <Space
             android:layout_width="match_parent"
             android:layout_height="14dp" />
@@ -36,38 +36,52 @@
             android:layout_width="match_parent"
             android:layout_height="14dp" />
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="207dp"
+            app:srcCompat="@drawable/ic_gfglogo" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="14dp" />
+
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="222dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="94dp"
-            android:text="@string/recent_books"
-            android:textAlignment="center"
-            android:textSize="34sp" />
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="15dp"
+            android:text="Book Name" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="14dp" />
 
-        <android.widget.SearchView
-            android:id="@+id/SearchView"
-            android:layout_width="344dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="35dp"
-            android:background="#F5F5F5"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="340dp" />
+        <TextView
+            android:id="@+id/editTextText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="15dp"
+            android:text="Price" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="14dp" />
 
-
-        <GridView
-            android:id="@+id/idGVcourses1"
-            android:layout_width="match_parent"
-            android:layout_height="508dp"
-            android:verticalSpacing="6dp" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="132dp"
+            android:text="Order" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
