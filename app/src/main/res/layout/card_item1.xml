@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/idIVcourse1"
@@ -23,11 +23,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:orientation="vertical">
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="19dp" />
 
             <TextView
                 android:id="@+id/idTVCourse1"

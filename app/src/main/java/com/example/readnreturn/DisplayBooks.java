@@ -9,11 +9,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,6 +57,14 @@ public class DisplayBooks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DisplayBooks.this, UploadBook.class));
+            }
+        });
+
+        ImageView imageView = findViewById(R.id.imageView);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DisplayBooks.this, profile.class));
             }
         });
     }

@@ -154,6 +154,18 @@ public class Api {
         return this.get("/books");
     }
 
+    JSONObject getBook(String bookid) throws JSONException, IOException, HTTPError {
+        return this.get("/books/" + bookid);
+    }
+
+    JSONObject secure() throws JSONException, IOException, HTTPError {
+        return this.get("/secure");
+    }
+
+    JSONObject deleteBook(int bookId) throws JSONException, IOException, HTTPError {
+        return this.get("/delete-book/" + String.valueOf(bookId));
+    }
+
     boolean logout() throws JSONException, IOException, HTTPError {
         this.get("/logout");
         return true;

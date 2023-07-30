@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -17,6 +19,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class RecentBooks extends AppCompatActivity {
 
@@ -30,6 +33,17 @@ public class RecentBooks extends AppCompatActivity {
         if(string == null) {
             finish();
         }
+
+        ImageView imageView = findViewById(R.id.imageView6);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RecentBooks.this, profile.class));
+            }
+        });
+
+        TextView textView = findViewById(R.id.textView5);
+        textView.setText(string);
 
         loadData(string);
     }
@@ -50,15 +64,9 @@ public class RecentBooks extends AppCompatActivity {
             coursesGV1.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    try {
-                        editor.putString("currentBook", jsonArray.getString(position));
-                        editor.apply();
-//                        startActivity(new Intent(DisplayBooks.this, RecentBooks.class));
-
-                    } catch (JSONException e) {
-                        toast.setText("couldn't add");
-                        toast.show();
-                    }
+                    Intent intent = new Intent(RecentBooks.this, OrderbookActivity.class);
+                    intent.putExtra("currentBook", position);
+                    startActivity(intent);
 
                 }
             });

@@ -27,4 +27,9 @@
     <string name="todo">TODO</string>
     <string name="recent_books">Recent Books</string>
     <string name="author">Author</string>
+    <string name="emailView">email</string>
+    <string name="nameView">name</string>
+    <string name="todod">TODO</string>
+    <string name="delete_book">Delete Book</string>
+    <string name="request_book">Request Book</string>
 </resources>

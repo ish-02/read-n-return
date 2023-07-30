@@ -7,30 +7,21 @@
     tools:context=".RecentBooks">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#DCF5FD"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <Space
+        <ImageView
+            android:id="@+id/imageView6"
             android:layout_width="match_parent"
-            android:layout_height="14dp" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/r_amp_r"
-            android:textAlignment="center"
-            android:textSize="48sp" />
+            android:layout_height="210dp"
+            app:srcCompat="@drawable/displaybooks"
+            tools:ignore="ContentDescription" />
 
         <Space
             android:layout_width="match_parent"
@@ -49,15 +40,6 @@
             android:layout_width="match_parent"
             android:layout_height="14dp" />
 
-        <android.widget.SearchView
-            android:id="@+id/SearchView"
-            android:layout_width="344dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="35dp"
-            android:background="#F5F5F5"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="340dp" />
-
         <Space
             android:layout_width="match_parent"
             android:layout_height="14dp" />
@@ -66,7 +48,8 @@
         <GridView
             android:id="@+id/idGVcourses1"
             android:layout_width="match_parent"
-            android:layout_height="508dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
             android:verticalSpacing="6dp" />
 
     </LinearLayout>

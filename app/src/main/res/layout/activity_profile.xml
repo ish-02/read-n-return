@@ -18,52 +18,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
-        
+
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp"></Space>
+            android:layout_height="50dp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            app:srcCompat="@drawable/profile"
-            ></ImageView>
+            app:srcCompat="@drawable/baseline_person_24"
+            android:contentDescription="@string/todod" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="14dp"></Space>
+            android:layout_height="14dp" />
 
         <TextView
+            android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
             android:padding="10dp"
-            android:text="User Name"></TextView>
+            android:text="@string/nameView"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="14dp"></Space>
+            android:layout_height="14dp" />
 
         <TextView
+            android:id="@+id/emailView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
             android:padding="15dp"
-            android:text="Uploads"></TextView>
+            android:text="@string/emailView"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="14dp"></Space>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:padding="15dp"
-            android:text="Orders"></TextView>
+            android:layout_height="14dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
