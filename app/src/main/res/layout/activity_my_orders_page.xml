@@ -10,18 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="14dp" />
 
-        <TextView
-            android:id="@+id/textView1"
+        <ImageView
+            android:id="@+id/imageView8"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/r_amp_r"
-            android:textAlignment="center"
-            android:textSize="48sp" />
+            android:layout_height="210dp"
+            app:srcCompat="@drawable/displaybooks"
+            tools:ignore="ContentDescription" />
 
         <Space
             android:layout_width="match_parent"
@@ -42,6 +37,7 @@
         <ListView
             android:id="@+id/idLV2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:padding="10dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

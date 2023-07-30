@@ -53,20 +53,10 @@ public class DisplayBooks extends AppCompatActivity {
         });
 
         Button button = findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DisplayBooks.this, UploadBook.class));
-            }
-        });
+        button.setOnClickListener(v -> startActivity(new Intent(DisplayBooks.this, UploadBook.class)));
 
         ImageView imageView = findViewById(R.id.imageView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DisplayBooks.this, profile.class));
-            }
-        });
+        imageView.setOnClickListener(view -> startActivity(new Intent(DisplayBooks.this, profile.class)));
     }
 
 
