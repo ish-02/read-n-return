@@ -36,6 +36,7 @@
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="207dp"
+            android:textAlignment="center"
             app:srcCompat="@drawable/ic_gfglogo" />
 
         <Space
@@ -51,7 +52,8 @@
             android:ems="10"
             android:inputType="text"
             android:padding="15dp"
-            android:text="Book Name" />
+            android:text="Book Name"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
@@ -66,7 +68,8 @@
             android:ems="10"
             android:inputType="text"
             android:padding="15dp"
-            android:text="Author" />
+            android:text="Author"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
@@ -81,7 +84,8 @@
             android:ems="10"
             android:inputType="text"
             android:padding="15dp"
-            android:text="Description" />
+            android:text="Description"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"

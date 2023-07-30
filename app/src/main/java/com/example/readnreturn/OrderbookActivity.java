@@ -70,6 +70,7 @@ public class OrderbookActivity extends AppCompatActivity {
                                 toast.show();
 
                                 finish();
+                                startActivity(new Intent(OrderbookActivity.this, DisplayBooks.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
                             }
 
@@ -79,13 +80,22 @@ public class OrderbookActivity extends AppCompatActivity {
                     }
                 });
             } else {
-                orderBook.setText(R.string.request_book);
-                orderBook.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+                if(bookObj.getBoolean("requested")) {
+                    orderBook.setText(R.string.request_pending);
+                } else {
+                    orderBook.setText(R.string.request_book);
+                    orderBook.setOnClickListener(view -> {
+                        try {
+                            JSONObject jsonObject1 = MainActivity.api.order(String.valueOf(bookObj.getInt("id")));
+                            String response = jsonObject1.getString("status");
+                            Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                        } catch (JSONException | IOException | HTTPError e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
 
-                    }
-                });
+                }
+
             }
 
 

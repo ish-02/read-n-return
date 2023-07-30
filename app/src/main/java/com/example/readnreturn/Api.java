@@ -166,6 +166,17 @@ public class Api {
         return this.get("/delete-book/" + String.valueOf(bookId));
     }
 
+    JSONObject order(String bookId) throws JSONException, IOException, HTTPError {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("bookId", bookId);
+
+        return this.post("/order", jsonObject.toString());
+    }
+
+    JSONObject getOrders() throws JSONException, IOException, HTTPError {
+        return this.get("/all_orders");
+    }
+
     boolean logout() throws JSONException, IOException, HTTPError {
         this.get("/logout");
         return true;

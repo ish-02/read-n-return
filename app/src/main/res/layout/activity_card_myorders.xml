@@ -45,7 +45,7 @@
                 android:id="@+id/idTV2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="price"
+                android:text="author"
                 android:textAlignment="center" />
             <Space
                 android:layout_width="match_parent"

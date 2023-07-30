@@ -65,8 +65,12 @@ public class RecentBooks extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent intent = new Intent(RecentBooks.this, OrderbookActivity.class);
-                    intent.putExtra("currentBook", position);
-                    startActivity(intent);
+                    try {
+                        intent.putExtra("currentBook", jsonArray.getJSONObject(position).getString("id"));
+                        startActivity(intent);
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
 
                 }
             });
