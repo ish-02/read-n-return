@@ -4,32 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:background="#DCF5FD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="51dp" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/r_amp_r"
-            android:textAlignment="center"
+            android:fontFamily="@font/jacques_francois"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/read_return"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
-            android:textSize="48sp" />
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:text="Discover the joy of sharing and exploring a world of books with fellow bibliophiles like you."
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -38,36 +55,41 @@
 
         <EditText
             android:id="@+id/inputName"
-            android:layout_width="330dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="40dp"
             android:autofillHints="emailAddress"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:background="#fff"
+            android:hint="@string/email"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#f2f2f2"
             android:ems="10"
             android:inputType="text"
-            android:hint="@string/email"
-            tools:ignore="LabelFor" />
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            tools:ignore="LabelFor"
+            />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="22dp"
             android:minHeight="51dp" />
 
         <EditText
             android:id="@+id/inputPassword"
-            android:layout_width="330dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_width="320dp"
             android:layout_height="48dp"
-            android:layout_marginStart="40dp"
-            android:autofillHints="password"
+            android:layout_gravity="center_horizontal"
+            android:background="#f2f2f2"
+            android:ems="10"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            android:background="#fff"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="@string/password"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor"
+            />
 
         <Space
             android:layout_width="match_parent"
@@ -76,23 +98,14 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="144dp"
+            android:text="@string/login"
+            android:layout_width="320dp"
             android:layout_height="48dp"
-            android:layout_marginStart="122dp"
+            android:layout_gravity="center_horizontal"
             android:background="@color/black"
             android:backgroundTint="@color/black"
-            android:text="@string/login"
+            android:gravity="center"
             android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/welcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/jacques_francois"
-            android:text="@string/welcome"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="37sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -100,26 +113,26 @@
             android:minHeight="51dp" />
 
         <TextView
-            android:textColor="@color/black"
             android:id="@+id/textView3"
-            android:layout_width="255dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="@font/inter_medium"
             android:text="@string/create_a_new_account"
-            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
             tools:ignore="TextSizeCheck" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="12dp"
             android:minHeight="51dp" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="144dp"
             android:layout_height="48dp"
-            android:layout_marginStart="122dp"
+            android:layout_gravity="center_horizontal"
             android:background="@color/black"
             android:backgroundTint="@color/black"
             android:text="@string/sign_in"

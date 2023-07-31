@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".RecentBooks">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DCF5FD"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,16 +30,18 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="222dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="94dp"
             android:text="@string/recent_books"
-            android:textAlignment="center"
-            android:textSize="34sp" />
-
-        <Space
             android:layout_width="match_parent"
-            android:layout_height="14dp" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jacques_francois"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="408dp" />
 
         <Space
             android:layout_width="match_parent"

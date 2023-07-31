@@ -3,23 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".profile">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="1dp"
-        android:background="#DCF5FD"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -39,7 +35,8 @@
             android:layout_marginRight="60dp"
             android:padding="10dp"
             android:text="@string/nameView"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"
@@ -53,7 +50,8 @@
             android:layout_marginRight="60dp"
             android:padding="15dp"
             android:text="@string/emailView"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"
@@ -61,11 +59,13 @@
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:text="My Books"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
             android:textColor="@color/white" />
 
         <Space
@@ -74,11 +74,13 @@
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:text="My Orders"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
             android:textColor="@color/white" />
 
         <Space
@@ -87,11 +89,13 @@
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:text="Logout"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
             android:textColor="@color/white" />
 
     </LinearLayout>

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MainActivity.api = new Api("http://192.168.182.70:5000", getApplicationContext());
+        MainActivity.api = new Api("http://192.168.232.13:5000", getApplicationContext());
 
         int SDK_INT = android.os.Build.VERSION.SDK_INT;
         if (SDK_INT > 8)

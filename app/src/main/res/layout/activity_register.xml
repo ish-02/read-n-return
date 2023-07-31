@@ -5,13 +5,13 @@
     android:id="@+id/img1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Register">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="1dp"
-        android:background="#DCF5FD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,88 +21,95 @@
         tools:ignore="VisualLintBounds">
 
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <TextView
+            android:id="@+id/textView10"
             android:layout_width="match_parent"
-            android:layout_height="195dp"
-            tools:srcCompat="@drawable/img1"
-
-            android:importantForAccessibility="no" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jacques_francois"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/read_return"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="32sp" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="237dp"
-            android:layout_height="45sp"
-            android:layout_marginStart="61dp"
-            android:text="@string/create_account"
-            android:textSize="34sp"
+            android:id="@+id/welcome2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:text="New here? Create an account.\nRemember we share your email to the owner of the book you request."
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textSize="16sp" />
 
-            tools:ignore="TextSizeCheck" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="23dp" />
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="273dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="61dp"
-            android:autofillHints=""
-            android:background="#fff"
-            android:textColor="@color/black"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#f2f2f2"
+            android:ems="10"
             android:hint="@string/name"
-            android:padding="15dp"
-            android:textColorHint="#000"
-            android:textSize="24sp"
-            android:inputType="text" />
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            tools:ignore="LabelFor" />
 
-        <View
-            android:layout_width="282.02dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="1dp"
-            android:background="#000" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="23dp" />
 
         <EditText
             android:id="@+id/editText3"
-            android:layout_width="273dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="61dp"
-            android:background="#fff"
-            android:textColor="@color/black"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints=""
+            android:background="#f2f2f2"
+            android:ems="10"
             android:hint="@string/email_"
-            android:padding="15dp"
-            android:textColorHint="#000"
-            android:textSize="24sp"
-            android:autofillHints="emailAddress"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            tools:ignore="LabelFor" />
 
-        <View
-            android:layout_width="282.02dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="1dp"
-            android:background="#000" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="23dp" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="273dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="61dp"
-            android:background="#fff"
             android:hint="@string/password"
-            android:padding="15dp"
-            android:textColor="@color/black"
-            android:textColorHint="#000"
-            android:textSize="24sp"
+            android:inputType="textPassword"
             android:autofillHints="password"
-            android:inputType="textPassword" />
-
-        <View
-            android:layout_width="282.02dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="1dp"
-            android:background="#000" />
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#f2f2f2"
+            android:ems="10"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            tools:ignore="LabelFor" />
 
         <Space
             android:layout_width="match_parent"
@@ -110,11 +117,18 @@
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="144dp"
-            android:textColor="@color/white"
+            android:text="@string/register"
+            android:layout_width="320dp"
             android:layout_height="48dp"
-            android:layout_marginStart="122dp"
-            android:text="@string/register" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="47dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

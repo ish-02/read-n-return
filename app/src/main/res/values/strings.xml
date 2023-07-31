@@ -33,4 +33,7 @@
     <string name="delete_book">Delete Book</string>
     <string name="request_book">Request Book</string>
     <string name="request_pending">Request Pending</string>
+    <string name="read_return"><![CDATA[Read&Return]]></string>
+    <string name="fill_out_below_details_to_add_your_book">Fill out below details to add your book.</string>
+    <string name="order">Order</string>
 </resources>
