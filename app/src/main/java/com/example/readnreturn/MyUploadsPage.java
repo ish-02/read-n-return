@@ -48,7 +48,11 @@ public class MyUploadsPage extends AppCompatActivity {
             }
             coursesGV1.setOnItemClickListener((parent, view, position, id) -> {
                 Intent intent = new Intent(MyUploadsPage.this, OrderbookActivity.class);
-                intent.putExtra("currentBook", position);
+                try {
+                    intent.putExtra("currentBook", jsonArray.getJSONObject(position).getString("id"));
+                } catch (JSONException e) {
+                    throw new RuntimeException(e);
+                }
                 startActivity(intent);
 
             });

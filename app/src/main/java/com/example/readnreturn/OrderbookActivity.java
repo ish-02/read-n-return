@@ -25,20 +25,20 @@ public class OrderbookActivity extends AppCompatActivity {
         setContentView(R.layout.orderbook);
 
         Bundle bundle = getIntent().getExtras();
-        int string = bundle.getInt("currentBook");
+        String string = bundle.getString("currentBook");
 
         ImageView imageView = findViewById(R.id.imageView7);
         imageView.setOnClickListener(view -> startActivity(new Intent(OrderbookActivity.this, profile.class)));
 
-        loadData(string + 1);
+        loadData(string);
     }
 
-    public void loadData(Integer book) {
+    public void loadData(String book) {
         Toast toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         try {
-            JSONObject jsonObject = MainActivity.api.getBook(book.toString());
+            JSONObject jsonObject = MainActivity.api.getBook(book);
             JSONObject bookObj = jsonObject.getJSONObject("book");
 
             TextView bookName = findViewById(R.id.editTextText);
@@ -70,12 +70,12 @@ public class OrderbookActivity extends AppCompatActivity {
                                 toast.show();
 
                                 finish();
-                                startActivity(new Intent(OrderbookActivity.this, DisplayBooks.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                                startActivity(new Intent(OrderbookActivity.this, DisplayBooks.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 
                             }
 
                         } catch (JSONException | IOException | HTTPError e) {
-                            throw new RuntimeException(e);
+                            Toast.makeText(getApplicationContext(), "error while deleting, try again later", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -86,11 +86,15 @@ public class OrderbookActivity extends AppCompatActivity {
                     orderBook.setText(R.string.request_book);
                     orderBook.setOnClickListener(view -> {
                         try {
+                            Toast.makeText(getApplicationContext(), "please wait!", Toast.LENGTH_LONG).show();
                             JSONObject jsonObject1 = MainActivity.api.order(String.valueOf(bookObj.getInt("id")));
                             String response = jsonObject1.getString("status");
                             Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                            if(response.equals("request sent!")) {
+                                orderBook.setText(R.string.request_pending);
+                            }
                         } catch (JSONException | IOException | HTTPError e) {
-                            throw new RuntimeException(e);
+                            Toast.makeText(getApplicationContext(), "couldn't place a request, try again later", Toast.LENGTH_LONG).show();
                         }
                     });
 

@@ -35,6 +35,18 @@ public class MainActivity extends AppCompatActivity {
             StrictMode.setThreadPolicy(policy);
         }
 
+
+        try {
+            JSONObject jsonObject = MainActivity.api.secure();
+            if(jsonObject != null) {
+                startActivity(new Intent(MainActivity.this, DisplayBooks.class));
+                finish();
+            }
+        } catch (JSONException | IOException | HTTPError e) {
+            Toast.makeText(getApplicationContext(), "Welcome!", Toast.LENGTH_SHORT).show();
+        }
+
+
         Button button = findViewById(R.id.button);
         // login
         button.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                         toast.show();
 
                         startActivity(new Intent(MainActivity.this, DisplayBooks.class));
+                        finish();
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

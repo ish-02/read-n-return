@@ -49,9 +49,9 @@ public class profile extends AppCompatActivity {
         logout.setOnClickListener(view -> {
             try {
                 boolean jsonObject = MainActivity.api.logout();
-                finish();
                 Toast.makeText(getApplicationContext(), "Logging out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(profile.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                finishActivity(0);
+                startActivity(new Intent(profile.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
             } catch (JSONException | IOException | HTTPError e) {
                 throw new RuntimeException(e);
             }
